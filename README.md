@@ -1,6 +1,8 @@
 minor-branch
 ============
 
+[![Build Status](https://travis-ci.org/mwinche/minor-branch.svg)](https://travis-ci.org/mwinche/minor-branch) [![Coverage Status](https://coveralls.io/repos/mwinche/minor-branch/badge.svg?branch=master&service=github)](https://coveralls.io/github/mwinche/minor-branch?branch=master)
+
 Utility which automates the creation of a minor version branch whenever a
 new major or minor version is made.
 

@@ -1,6 +1,6 @@
 {
   "name": "minor-branch",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "CLI intended to create minor version branches whenever a new minor or major version is cut. Currently only works with Git.",
   "main": "index.js",
   "scripts": {

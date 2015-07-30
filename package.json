@@ -1,0 +1,50 @@
+{
+  "name": "minor-branch",
+  "version": "0.0.0",
+  "description": "CLI intended to create minor version branches whenever a new minor or major version is cut. Currently only works with Git.",
+  "main": "index.js",
+  "scripts": {
+    "test": "istanbul cover ./node_modules/.bin/_mocha -- -R spec test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mwinche/minor-branch"
+  },
+  "keywords": [
+    "git",
+    "version",
+    "minor",
+    "major",
+    "patch",
+    "semver",
+    "branch"
+  ],
+  "bin": {
+    "minor-branch": "./index.js"
+  },
+  "author": "Matt Winchester",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mwinche/minor-branch/issues"
+  },
+  "homepage": "https://github.com/mwinche/minor-branch",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "ghooks": "^0.3.2",
+    "istanbul": "^0.3.17",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "mocha-lcov-reporter": "0.0.2",
+    "rewire": "^2.3.4",
+    "sinon": "^1.15.4",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+    "git": "^0.1.5",
+    "npm": "^2.13.2",
+    "semver": "^5.0.1"
+  },
+  "engines": {
+    "npm": ">=2.13.0"
+  }
+}

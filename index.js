@@ -12,14 +12,6 @@ function getCurrentVersion(){
 	return package_json.version;
 }
 
-function getCurrentName(){
-	return package_json.name;
-}
-
-function getVersions(npmViewData){
-	return npmViewData[Object.keys(npmViewData)[0]].versions;
-}
-
 function createPreviousMinorBranch(tag){
 	var major = semver.major(tag),
 		minor = semver.minor(tag),
@@ -50,14 +42,7 @@ var run = module.exports = function run(){
 	if(patch !== 0){
 		return;
 	}
-
-	npm.load({}, function(){
-		npm.commands.view([getCurrentName(), 'versions'], true, function(err, data){
-			var tagToBranch = semver.maxSatisfying(getVersions(data), '<' + version);
-
-			createPreviousMinorBranch(tagToBranch);
-		})
-	});
+	createPreviousMinorBranch(version);
 };
 
 if(require.main === module){

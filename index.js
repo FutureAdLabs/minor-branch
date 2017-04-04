@@ -25,6 +25,7 @@ function createPreviousMinorBranch(tag) {
       console.log('Branch ' + branch + ' already exists');
     } else {
       console.log('Branch ' + branch + ' successfully created');
+      console.log('Pushing ' + branch);
       spawn('git', ['push', 'origin', branch], params).on('close', function(err, res) {
         if (err) {
           console.error('Error pushing branch:', err);
